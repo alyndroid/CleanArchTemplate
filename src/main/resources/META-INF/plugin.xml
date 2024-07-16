@@ -1,0 +1,68 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.hamalawy.CleanArchTemplate</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Clean Arch Template</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="ali96nasser@gmail.com" url="https://www.youtube.com/c/codingwithnerds">Hamalawey</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    <h1>MVI Template Creator</h1>
+        <p><strong>MVI Template Creator</strong> is an IntelliJ/Android Studio plugin designed to streamline the creation of Clean Architecture projects. This plugin automatically generates the necessary template files for the three layers: App, Data, and Domain, ensuring that your project adheres to the principles of Clean Architecture from the start.</p>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Generate template files for the App layer, including UI components and ViewModels.</li>
+            <li>Create Data layer templates, including repositories and data sources.</li>
+            <li>Build Domain layer templates, including use cases and entity models.</li>
+            <li>Customizable directory selection to fit your project's structure.</li>
+            <li>Seamless integration with your existing IntelliJ/Android Studio environment.</li>
+        </ul>
+
+        <h2>How It Works</h2>
+        <p>Once installed, MVI Template Creator allows you to select directories within your project where the template files will be generated. The plugin provides an intuitive interface to specify the locations for the App, Data, and Domain layers. By following the Clean Architecture principles, it helps you maintain a well-organized and scalable codebase.</p>
+
+        <h2>Getting Started</h2>
+        <p>To get started with MVI Template Creator:</p>
+        <ol>
+            <li>Install the plugin from the IntelliJ/Android Studio Plugin Marketplace.</li>
+            <li>Navigate to the plugin settings to configure the directory paths for the App, Data, and Domain layers.</li>
+            <li>Use the plugin to generate the necessary template files and start building your Clean Architecture project.</li>
+        </ol>
+
+        <h2>Requirements</h2>
+        <p>This plugin requires IntelliJ IDEA or Android Studio version 2020.3 or later.</p>
+
+        <h2>Support</h2>
+        <p>If you have any questions or need support, please contact us at <a href="mailto:ali96nasser@gmail.com">ali96nasser@gmail.com</a>.</p>
+  ]]></description>
+
+    <extensions defaultExtensionNs="com.intellij">
+
+        <applicationService serviceImplementation="com.hamalawy.cleanarchtemplate.DirectorySettings" />
+        <projectConfigurable instance="com.hamalawy.cleanarchtemplate.DirectorySettingsConfigurable" displayName="MVI Pattern Settings" />
+    </extensions>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+
+    <actions>
+        <action id="YourPlugin.Hamalawy.create" class="com.hamalawy.cleanarchtemplate.CreateFeatureClassesAction" text="Create Clean Arch Template">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="CleanArchTemplate.main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CleanArchTemplate_main_jar</output-path>
+    <root id="archive" name="CleanArchTemplate.main.jar">
+      <element id="module-output" name="CleanArchTemplate.main" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.24/9928532f12c66ad816a625b3f9984f8368ca6d2b/kotlin-stdlib-1.9.24.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" path-in-jar="/" />
+      <element id="library" level="project" name="Gradle: com.jetbrains.intellij.java:java-api:222.2886.20" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" />
+      </element>
+    </root>
+  </artifact>
+</component>
